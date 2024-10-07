@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Rate Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">    
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Rate Calculator</h1>
+        <form id="heart-rate-form">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age" required>
+
+            <label for="restingHeartRate">Resting Heart Rate (bpm):</label>
+            <input type="number" id="restingHeartRate" placeholder="Enter resting heart rate" required>
+
+            <label for="activityLevel">Activity Level:</label>
+            <select id="activityLevel" required>
+                <option value="" disabled selected>Select your activity level</option>
+                <option value="1.0">Sedentary</option>
+                <option value="1.1">Lightly active</option>
+                <option value="1.2">Moderately active</option>
+                <option value="1.3">Very active</option>
+            </select>
+
+            <button type="button" onclick="calculateHeartRate()">Calculate Target Heart Rate</button>
+        </form>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

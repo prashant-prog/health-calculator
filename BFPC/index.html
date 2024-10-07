@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Fat Percentage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">    
+    </head>
+<body>
+    <div class="container">
+        <h1>Body Fat Calculator</h1>
+        <form id="bodyfat-form">
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="waist">Waist Circumference (cm):</label>
+            <input type="number" id="waist" placeholder="Enter waist size in cm" required>
+
+            <label for="neck">Neck Circumference (cm):</label>
+            <input type="number" id="neck" placeholder="Enter neck size in cm" required>
+
+            <div id="female-only">
+                <label for="hips">Hip Circumference (cm):</label>
+                <input type="number" id="hips" placeholder="Enter hip size in cm">
+            </div>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter height in cm" required>
+
+            <button type="button" onclick="calculateBodyFat()">Calculate Body Fat</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

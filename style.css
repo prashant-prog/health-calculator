@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Allows stacking of elements */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e; /* Slightly lighter container */
+    border-radius: 10px;
+    box-shadow: rgba(93, 24, 220, 0.7) 0px 5px 15px;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: "Pacifico", cursive;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    border: 0;
+    background-color: #333333; /* Dark button background */
+    color: #ffffff; /* Light button text */
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: auto;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.button:hover {
+    letter-spacing: 3px;
+    background-color: #5e35b1; /* Dark purple on hover */
+    color: #ffffff; /* Keep light text on hover */
+    box-shadow: rgba(93, 24, 220, 0.7) 0px 7px 29px 0px;
+}
+
+.button:active {
+    letter-spacing: 3px;
+    background-color: #5e35b1;
+    color: #ffffff;
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+/* New styles for copyright text */
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #cccccc; /* Light gray text color */
+    font-family: 'Courier New', Courier, monospace; /* Set font to Courier New */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .button {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
